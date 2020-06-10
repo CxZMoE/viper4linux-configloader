@@ -31,7 +31,7 @@ A config loader for Viper4Linux - An Adaptive Digital Sound Processor
 ## Debian Package
 
 the program installed by debian package have config files provided by viper4linux author and community which is located in:
-`/usr/local/viper4linux-configloader/configs`,you can use this path to fill in the settings section in the Installation Guide blow.
+`/usr/local/viper4linux-configloader/configs`,you can use this path to fill in the settings section in the Installation Guide below.
 
 ```shell
 wget https://github.com/CxZMoE/viper4linux-configloader/releases/download/v1.0/viper4linux-configloader-linux-amd64.deb
