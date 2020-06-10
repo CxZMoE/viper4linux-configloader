@@ -69,10 +69,10 @@ viper4linux-configloader
 
 1. You need to configure settings first when first run.
 - this step you need to set where you put config files,like: `/home/xxx/myconfigs/`
-- - You can use `/usr/local/viper4linux-configloader/configs` if you installed from debian package.
+  - You can use `/usr/local/viper4linux-configloader/configs` if you installed from debian package.
 
 - then set where the audio.conf is,for my case,it's  `/home/cxzmoe/.config/viper4linux/audio.conf`
-- - Notmally in `~/.config/viper4linux` if you follow the installation guide of viper4linux.
+  - Notmally in `~/.config/viper4linux` if you follow the installation guide of viper4linux.
 
 
 `tip: if you have an empty config dicrectory, you need to fill it first before run this program.`
