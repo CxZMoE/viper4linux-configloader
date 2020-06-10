@@ -61,6 +61,18 @@ func settingInput(hint string, saveVar *string) {
 }
 
 func init() {
+	// get user home dir.
+	userHome := os.Getenv("HOME") + "/"
+	configPath := userHome + "/.config/viper4linux-configloader"
+	_, err := os.Stat(configPath)
+
+	// create config directory when not exists.
+	if os.IsNotExist(err) {
+		os.MkdirAll(configPath, 0755)
+	}
+
+	// change work directory.
+	os.Chdir(configPath)
 
 	// Check is the viper installed...
 	cmd := exec.Command("which", "viper")
@@ -98,7 +110,7 @@ func init() {
 		}
 		if configSaveDir == "" {
 			// Default config storage directory.
-			configSaveDir = "./configs"
+			configSaveDir = "/usr/local/viper4linux-configloader/configs"
 		}
 	}
 
