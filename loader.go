@@ -26,7 +26,7 @@ var (
 
 const banner = `
 ===========================================
-|             v4dconfigloader             |
+|         viper4linuxconfigloader         |
 |                                         |
 |                 welcome                 |
 |                                         |
