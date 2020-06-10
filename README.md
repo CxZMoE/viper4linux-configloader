@@ -5,7 +5,7 @@ A config loader for Viper4Linux - An Adaptive Digital Sound Processor
 
 ```
 ===========================================
-|             v4dconfigloader             |
+|         viper4linuxconfigloader         |
 |                                         |
 |                 welcome                 |
 |                                         |
@@ -83,7 +83,7 @@ Viper4Linux found at: /home/cxzmoe/.local/bin/viper
 
 
 ===========================================
-|             v4dconfigloader             |
+|         viper4linuxconfigloader         |
 |                                         |
 |                 welcome                 |
 |                                         |
