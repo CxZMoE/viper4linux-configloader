@@ -35,12 +35,11 @@ mv viper4linux-configloader-linux-amd64 viper-loader
 ```
 3. copy it to your bin directory(like ~/.local/bin|~/.bin|/usr/bin,etc),make sure the directory is included in your environment path.
 ``` shell
-// Check environment path.
+# Check environment path.
 echo $PATH
-/*
-...
-/usr/bin
-*/
+# /home/xxx/go/bin:/home/xxx/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+# make sure the your bin directory is included in your environment path
+
 sudo cp viper-loader /usr/bin
 ```
 3. run 
