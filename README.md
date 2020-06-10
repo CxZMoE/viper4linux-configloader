@@ -5,7 +5,7 @@ A config loader for Viper4Linux - An Adaptive Digital Sound Processor
 
 ```
 ===========================================
-|             v4dconfigloader             |
+|         viper4linuxconfigloader         |
 |                                         |
 |                 welcome                 |
 |                                         |
@@ -39,10 +39,11 @@ sudo dpkg -i viper4linux-configloader-linux-amd64.deb
 ```
 
 ## Manual
+
 1. download [released](https://github.com/CxZMoE/viper4linux-configloader/releases/tag/v1.0) executable file.
 2. change the filename to whatever you want it to be.
 ```shell
-mv viper4linux-configloader-linux-amd64 viper-loader
+mv viper4linux-configloader-linux-amd64 viper4linux-configloader
 ```
 3. copy it to your bin directory(like ~/.local/bin|~/.bin|/usr/bin,etc),make sure the directory is included in your environment path.
 ``` shell
@@ -51,17 +52,28 @@ echo $PATH
 # /home/xxx/go/bin:/home/xxx/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 # make sure the your bin directory is included in your environment path
 
-sudo cp viper-loader /usr/bin
+sudo cp viper4linux-configloader /usr/bin
 ```
 3. run 
 ```shell
-viper-loader
+viper4linux-configloader
 ```
 
 # Usage
+
+run program
+```shell
+viper4linux-configloader
+
+```
+
 1. You need to configure settings first when first run.
 - this step you need to set where you put config files,like: `/home/xxx/myconfigs/`
+  - You can use `/usr/local/viper4linux-configloader/configs` if you installed from debian package.
+
 - then set where the audio.conf is,for my case,it's  `/home/cxzmoe/.config/viper4linux/audio.conf`
+  - Notmally in `~/.config/viper4linux` if you follow the installation guide of viper4linux.
+
 
 `tip: if you have an empty config dicrectory, you need to fill it first before run this program.`
 
@@ -71,7 +83,7 @@ Viper4Linux found at: /home/cxzmoe/.local/bin/viper
 
 
 ===========================================
-|             v4dconfigloader             |
+|         viper4linuxconfigloader         |
 |                                         |
 |                 welcome                 |
 |                                         |
@@ -110,3 +122,13 @@ Load config of number? ( -1 to quit )
 3. Input -1 and then Enter to quit, if you use CTRL+C to quit, the viper will be killed by SIGKILL.
 
 4. ENJOY!
+
+# QA
+1. How to clear my config?
+simply `rm -rf ~/.config/viper4linux-configloader`
+
+2. Where is the preprovided config files?
+`/usr/local/viper4linux-configloader/configs`
+
+3. Where is the audio.conf?
+Notmally in `~/.config/viper4linux` if you follow the installation guide of viper4linux.
