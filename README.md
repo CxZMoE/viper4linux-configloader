@@ -28,6 +28,13 @@ A config loader for Viper4Linux - An Adaptive Digital Sound Processor
 
 # Installation
 
+## Debian Package
+```shell
+wget https://github.com/CxZMoE/viper4linux-configloader/releases/download/v1.0/viper4linux-configloader-linux-amd64.deb
+sudo dpkg -i viper4linux-configloader-linux-amd64.deb
+```
+
+## Manual
 1. download [released](https://github.com/CxZMoE/viper4linux-configloader/releases/tag/v1.0) executable file.
 2. change the filename to whatever you want it to be.
 ```shell
