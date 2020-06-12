@@ -169,10 +169,10 @@ func main() {
 		// Number of exit
 		if num == -1 {
 			os.Exit(0)
+		} else {
+			// Replace config files and restart viper4linux
+			runReplacement(infos[num].Path, mainConfPath, infos[num].WithIRS)
 		}
-
-		// Replace config files and restart viper4linux
-		runReplacement(infos[num].Path, mainConfPath, infos[num].WithIRS)
 
 	}
 }
