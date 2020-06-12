@@ -230,7 +230,7 @@ func runReplacement(src, dst string, hasIRS bool) error {
 
 	// reload viper
 
-	cmd := exec.Command("sh", "./viper_restart.sh")
+	cmd := exec.Command("viper", "restart")
 	cmd.SysProcAttr = &syscall.SysProcAttr{
 		// Create a new pid for viper process.
 		Setpgid: true,
