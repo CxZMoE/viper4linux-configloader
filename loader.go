@@ -155,7 +155,7 @@ func main() {
 			v.Print()
 		}
 
-		fmt.Printf("\nLoad config of number? ( -1 to quit ) ")
+		fmt.Printf("\nLoad config of number? ")
 
 		// Get user input
 		var num int
@@ -230,17 +230,18 @@ func runReplacement(src, dst string, hasIRS bool) error {
 
 	// reload viper
 
+	// stop first and restart
+
 	cmd := exec.Command("viper", "restart")
 	cmd.SysProcAttr = &syscall.SysProcAttr{
 		// Create a new pid for viper process.
 		Setpgid: true,
 	}
 
-	result, err := cmd.Output()
+	err = cmd.Start()
 	if err != nil {
 		fmt.Println(err)
 	}
-	fmt.Println(string(result))
 
 	fmt.Println("Reloaded")
 
