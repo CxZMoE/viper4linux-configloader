@@ -103,7 +103,7 @@ Viper4Linux found at: /home/cxzmoe/.local/bin/viper
 |                                         |
 ===========================================
 
-Please enter number of -1 to quit, quit with 'Ctrl+C' will cause viper stop.
+Quit with 'Ctrl+C'.
 
 0.[000-default-audio.conf]
 1.[loque-akg_k67_bass-audio.conf]
@@ -113,15 +113,13 @@ Please enter number of -1 to quit, quit with 'Ctrl+C' will cause viper stop.
 5.[topjor-srs_2_1-audio.conf] [With IRS]
 6.[unequaled86-cCc-audio.conf] [With IRS]
 
-Load config of number? ( -1 to quit ) 
+Load config of number? 
 
 ```
 
 2. Select the config file you want to switch to and press enter.
 
-3. Input -1 and then Enter to quit, if you use CTRL+C to quit, the viper will be killed by SIGKILL.
-
-4. ENJOY!
+3. ENJOY!
 
 # QA
 1. How to clear my config?

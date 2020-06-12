@@ -7,6 +7,7 @@ import (
 	"os/exec"
 	"path"
 	"strings"
+	"syscall"
 
 	"github.com/CxZMoE/cxzconfutils"
 )
@@ -164,11 +165,6 @@ func main() {
 		if num > len(infos)-1 || num < -1 {
 			fmt.Printf("Wrong number, please try again.")
 			continue
-		}
-
-		// Number of exit
-		if num == -1 {
-			os.Exit(0)
 		} else {
 			// Replace config files and restart viper4linux
 			runReplacement(infos[num].Path, mainConfPath, infos[num].WithIRS)
@@ -234,10 +230,18 @@ func runReplacement(src, dst string, hasIRS bool) error {
 
 	// reload viper
 
-	cmd := exec.Command("viper", "stop")
-	cmd.Run()
-	cmd = exec.Command("viper", "restart")
-	cmd.Start()
+	cmd := exec.Command("sh", "./viper_restart.sh")
+	cmd.SysProcAttr = &syscall.SysProcAttr{
+		// Create a new pid for viper process.
+		Setpgid: true,
+	}
+
+	result, err := cmd.Output()
+	if err != nil {
+		fmt.Println(err)
+	}
+	fmt.Println(string(result))
+
 	fmt.Println("Reloaded")
 
 	return nil
