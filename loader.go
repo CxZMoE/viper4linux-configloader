@@ -219,8 +219,8 @@ func runReplacement(src, dst string, hasIRS bool) error {
 		//srcWithNoExt := src[:strings.Index(src, path.Ext(src))]
 		convIrPath := cxzconfutils.GetValueFromFile(src, "conv_ir_path")
 		convIrPath = strings.TrimSuffix(path.Dir(src)+"/"+path.Base(strings.Split(convIrPath, "/")[1]), "\"")
-		//fmt.Println("copy:", convIrPath)
-		if NotExist("./" + convIrPath) {
+		fmt.Println("copy:", convIrPath)
+		if NotExist(convIrPath) {
 			fmt.Println("not exist")
 		}
 		to := path.Dir(dst) + "/" + path.Base(convIrPath)
