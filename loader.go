@@ -119,7 +119,16 @@ func init() {
 
 // Program Entry
 func main() {
-	
+	// Prevent Ctrl+C from killing viper
+	/* NOT WORKING, hope anyone knows how to solve this problem.
+	c := make(chan os.Signal, 1)
+	signal.Notify(c, syscall.SIGKILL, syscall.SIGQUIT, syscall.SIGTERM)
+	go func() {
+		<-c
+		os.Exit(0)
+	}()
+	*/
+
 	// BANNER display
 	fmt.Printf("%s\n", banner)
 	fmt.Printf("Please enter number of -1 to quit, quit with 'Ctrl+C' will cause viper stop.\n\n")
